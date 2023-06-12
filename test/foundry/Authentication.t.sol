@@ -24,6 +24,7 @@ contract AuthenticationTest is Test {
     function setUp() external {
         // for every test function it creates simple owner contract;
         // deployer address is deploying this contract;
+        
         vm.prank(deployer);
         simpleOwner = new SimpleOwner();
         console.log("Owner of this contract: ", simpleOwner.owner());
@@ -38,6 +39,7 @@ contract AuthenticationTest is Test {
         // msg.sender is AuthenticationTest; 
         // so the test going to fail; 
         // msg.sender is deployer;
+
         simpleOwner.updateOwner(user);
     }
 
@@ -45,8 +47,9 @@ contract AuthenticationTest is Test {
         vm.prank(deployer);
         // now msg.sender is deployer to the next call;
         // so, now owner is deployer; 
-        // owner is updated to the user address by calling updateOwner function;
+        
         simpleOwner.updateOwner(user);
+        // owner is updated to the user address by calling updateOwner function;
         assertEq(simpleOwner.owner(),user);
         console.log("now owner is user: ", simpleOwner.owner());
     }
@@ -55,8 +58,10 @@ contract AuthenticationTest is Test {
         vm.startPrank(user);
         // msg.sender is user to the subsequent calls;
         // owner is deplyer but the function calling by user;
-        // we are expecting to revert the function;
+
         vm.expectRevert();
+        // we are expecting to revert the function;
+
         simpleOwner.updateOwner(user);
         vm.stopPrank();
         // We are stopping user as msg.sender to the next call;
