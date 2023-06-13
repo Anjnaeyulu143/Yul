@@ -10,6 +10,7 @@ contract WETH {
     // approve - X
     // totalSupply - X
     // check allowance - X
+    // balanceOf - X
 
     string public name = "WETH";
     string public symbol = "wETH";
@@ -101,6 +102,10 @@ contract WETH {
         bool isTransfer = _transfer(_from,_to, _amount);
 
         return isTransfer;
+    }
+
+    function balanceOf(address _owner) external view returns(uint256){
+        return balances[_owner];
     }
 
 }

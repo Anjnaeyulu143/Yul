@@ -10,6 +10,8 @@ interface IWETH {
     function deposit() payable external;
 }
 
+// To run this file in fork mainnet
+// forge test --fork-url https://eth.llamarpc.com --match-contract DaiMintTest -vvvvv
 contract ForkTest is Test {
     IWETH public weth;
     function setUp() external {
