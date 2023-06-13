@@ -1,0 +1,66 @@
+{
+    "workbench.colorTheme": "SynthWave '84",
+    "solidity.packageDefaultDependenciesContractsDirectory": "lib",
+    "solidity.packageDefaultDependenciesDirectory": "src",
+    "solidity.remappings": [
+
+        {
+            "@foundry/contracts/*": "./node_modules/@superfluid-finance/ethereum-contracts-0.7/contracts/*",
+            "@foundry/*": "./contracts/*"
+          }
+          
+    ],
+    "solidity.telemetry": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "cSpell.userWords": [
+        "Ajna",
+        "analysing",
+        "collateralization",
+        "collateralized",
+        "delegatecall",
+        "Dont",
+        "DWAC",
+        "DWATP",
+        "ECADD",
+        "IERC",
+        "IWETH",
+        "JOJO",
+        "JUSD",
+        "klast",
+        "maintainance",
+        "Matcing",
+        "𝑀𝐴𝑈",
+        "merkle",
+        "mintable",
+        "Optimziations",
+        "pashov",
+        "pendings",
+        "permissionless",
+        "permissonlessly",
+        "predeposit",
+        "Reentrancy",
+        "Relesed",
+        "returndatasize",
+        "RIPEMD",
+        "selfdestruct",
+        "shiba",
+        "struct",
+        "undercounted",
+        "understanded",
+        "VTVL",
+        "weired"
+    ],
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "solidity-va.uml.options": null,
+    "git.suggestSmartCommit": false,
+    "solidity.remappingsUnix": [
+    
+    ],
+    "cSpell.languageSettings": [
+    
+    ]
+}
